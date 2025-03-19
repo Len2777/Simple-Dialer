@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:contentDescription="numbers"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:id="@+id/rec_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp"
+        android:scrollbarSize="2dp"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/textForRec"
+                android:layout_width="143dp"
+                android:layout_height="74dp"
+                android:layout_gravity="center"
+
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="50dp"
+                android:autoSizeMinTextSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:text="Recent"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:autoSizeMaxTextSize="50dp"
+                android:autoSizeMinTextSize="20dp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_weight="1"
+                android:text="@string/clear" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

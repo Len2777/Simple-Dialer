@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textPhone"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_weight="0.5"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeMinTextSize="16sp"
+        android:autoSizeStepGranularity="2sp"
+
+
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1"
+
+            style="@style/KeypadButton"
+            android:text="@string/one">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/KeypadButton"
+            android:text="@string/two">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/KeypadButton"
+            android:text="@string/three">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/KeypadButton"
+            android:text="@string/four">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/KeypadButton"
+            android:text="@string/five">
+
+        </Button>
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/KeypadButton"
+            android:text="@string/six">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/KeypadButton"
+            android:text="@string/seven">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/KeypadButton"
+            android:text="@string/eight">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/KeypadButton"
+            android:text="@string/nine">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/star"
+            style="@style/KeypadButton"
+
+            android:text="@string/star">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/zero"
+            style="@style/KeypadButton"
+
+            android:text="@string/zero">
+
+        </Button>
+
+
+        <Button
+            android:id="@+id/hashtag"
+            style="@style/KeypadButton"
+
+            android:text="@string/hashtag">
+
+        </Button>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/plus"
+            style="@style/KeypadButton"
+
+
+            android:text="@string/plus">
+
+        </Button>
+
+
+        <ImageButton
+            android:id="@+id/Call"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="@android:color/transparent"
+
+            android:contentDescription="@string/name_call"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sharp_add_ic_call_24">
+
+        </ImageButton>
+
+
+        <ImageButton
+            android:id="@+id/BackSpace"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="back"
+            android:scaleType="fitCenter"
+
+            android:src="@drawable/backspace" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+

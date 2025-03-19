@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CallWindowActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="406dp"
+        android:layout_height="147dp"
+        android:layout_marginBottom="192dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/Mute"
+            android:layout_width="96dp"
+            android:layout_height="87dp"
+            android:layout_gravity="center|left"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="mute"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mute" />
+
+
+        <ImageButton
+            android:id="@+id/keyBoardButton"
+            android:layout_width="107dp"
+            android:layout_height="83dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="close"
+            android:scaleType="fitCenter"
+            android:src="@drawable/keyboardphone" />
+
+
+        <ImageButton
+            android:id="@+id/speakerButton"
+            android:layout_width="97dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center|right"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+
+            android:autoSizeTextType="uniform"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="speaker"
+            android:scaleType="fitCenter"
+            android:src="@drawable/speakerbutton" />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/endCallButton"
+        android:src="@drawable/endcallbuttone"
+        android:contentDescription="close"
+
+        android:layout_width="105dp"
+        android:layout_height="98dp"
+        android:layout_margin="8dp"
+
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@android:color/transparent"
+
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <TextView
+        android:id="@+id/numberPhone"
+        android:layout_width="398dp"
+        android:layout_height="385dp"
+        android:layout_marginBottom="267dp"
+        android:autoSizeTextType="uniform"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:autoSizeMaxTextSize="60sp"
+        android:autoSizeMinTextSize="40sp"
+
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
