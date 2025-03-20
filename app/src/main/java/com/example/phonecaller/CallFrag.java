@@ -121,10 +121,7 @@ public class CallFrag extends Fragment {
         startActivity(callIntent);
 
 
-
     }
-
-
 
 
     public void savePhoneNumberToSharedPreferences(String number) {
@@ -140,6 +137,7 @@ public class CallFrag extends Fragment {
         editor.putString("numbers", updatedNumbers);
         editor.apply();
     }
+
 
 
 

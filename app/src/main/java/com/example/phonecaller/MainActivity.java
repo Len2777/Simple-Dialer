@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.karumi.dexter.Dexter;
 
 public class MainActivity extends AppCompatActivity {
+    int a = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,12 @@ public class MainActivity extends AppCompatActivity {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            if(a  < 1) {
+                RecentFrag recentFrag = new RecentFrag();
+                setFrag(recentFrag);
+                a+=1;
 
-
+            }
             return insets;
 
 

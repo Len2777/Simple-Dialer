@@ -124,12 +124,11 @@ public class RecentFrag extends Fragment {
         editor.apply();
     }
 
-    private void restartFrag(){
+    private void restartFrag() {
         FragmentTransaction fg = getActivity().getSupportFragmentManager().beginTransaction();
         fg.detach(this);
         fg.attach(this);
         fg.commit();
-
 
 
     }
