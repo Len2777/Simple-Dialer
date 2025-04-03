@@ -1,8 +1,8 @@
 package com.example.phonecaller;
 
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.telecom.TelecomManager;
+
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.karumi.dexter.Dexter;
+
 
 public class MainActivity extends AppCompatActivity {
     int a = 0;
@@ -33,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
             return insets;
-
-
-
-
 
         });
     }

@@ -22,6 +22,9 @@ public class ContactsFrag extends Fragment {
     LinearLayout linearLayout;
     Button button;
 
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,37 +52,37 @@ public class ContactsFrag extends Fragment {
 
     private void loadPhoneNumbersFromSharedPreferences() {
         SharedPreferences sharedPreferences = requireContext().getSharedPreferences("Contact", Context.MODE_PRIVATE);
-        String nickName = sharedPreferences.getString("Contacts", "");
+        String savedContacts = sharedPreferences.getString("Contacts", "");
 
-        if (nickName != null && !nickName.isEmpty()) {
-            String[] numberArray = nickName.split(",");
-            for (String nick : numberArray) {                                                         
-                addCallButton(nick);
-
+        if (savedContacts != null && !savedContacts.isEmpty()) {
+            String[] contactArray = savedContacts.split(";");
+            for (String contact : contactArray) {
+                if (!contact.isEmpty() && contact.contains(":")) {
+                    String[] parts = contact.split(":");
+                    String name = parts[0];
+                    String number = parts[1];
+                    addCallButton(name, number);
+                }
             }
         }
     }
 
-    private void addCallButton(String number) {
+    private void addCallButton(String name, String number) {
         Button button = new Button(requireContext());
-        button.setText(number);
+        button.setText(name);
         button.setBackgroundColor(Color.TRANSPARENT);
         button.setTextColor(Color.WHITE);
         button.setTextSize(40);
-        button.setGravity(0);
 
         button.setOnClickListener(v -> {
-
-
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setData(Uri.parse("tel:" + number));
             startActivity(callIntent);
-
         });
 
         linearLayout.addView(button);
-
     }
+
 
     public void getNickname(){
         SharedPreferences sharedPreferences = requireContext().getSharedPreferences("Contact", Context.MODE_PRIVATE);

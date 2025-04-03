@@ -33,7 +33,7 @@ public class addNewContact extends AppCompatActivity {
             setNumber = findViewById(R.id.NumberFroContacts);
 
 
-            confirm.setOnClickListener(view -> saveNickName());
+            confirm.setOnClickListener(view -> saveContact());
 
             back.setOnClickListener(view -> {
                 finish();
@@ -48,17 +48,21 @@ public class addNewContact extends AppCompatActivity {
 
 
     }
-    private void saveNickName(){
+    private void saveContact() {
         SharedPreferences sharedPreferences = getSharedPreferences("Contact", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        name = setName.getText().toString();
-        number = setNumber.getText().toString();
-        String currentName = sharedPreferences.getString("Contacts", "");
-        String updatedName = number + "," + currentName;
-        editor.putString("Contacts", (updatedName));
-        editor.apply();
+
+        String name = setName.getText().toString().trim();
+        String number = setNumber.getText().toString().trim();
+
+        if (!name.isEmpty() && !number.isEmpty()) {
+
+            String currentContacts = sharedPreferences.getString("Contacts", "");
+            String updatedContacts = name + ":" + number + ";" + currentContacts;
+            editor.putString("Contacts", updatedContacts);
+            editor.apply();
+        }
+
         finish();
     }
-
-
 }
